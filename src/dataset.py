@@ -13,7 +13,7 @@ class BERTDataset:
     def __getitem__(self, item):
         review = str(self.review)
         review = " ".join(review.split())
-        inputs = self.tokenizer.encoder_plus(
+        inputs = self.tokenizer.encode_plus(
             review,
             None,
             add_special_tokens=True,
